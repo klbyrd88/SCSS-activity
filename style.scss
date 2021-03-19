@@ -8,7 +8,6 @@
 $inline: inline-block;
 $flex: flex;
 $f-direction: column;
-$grid: grid;
 
 // Fonts
 $font-primary: Arial, sans-serif;
@@ -47,6 +46,7 @@ body {
   border-radius: $button-radius;
   width: 10rem;
   text-decoration: none;
+  text-align: $align-heading;
 }
 
 /* hero portion */
@@ -127,6 +127,7 @@ nav {
 
 .contact-info_description {
   width: 40%;
+  text-align: $align-heading;
 }
 
 .contact_email,
@@ -134,10 +135,7 @@ nav {
   width: 95%;
 }
 
-.contact_first,
-.contact_last,
-.contact_number,
-.contact_email {
+form input {
   margin: 0.25rem;
   border: 0.1rem solid gray;
   border-radius: 0.2rem;
