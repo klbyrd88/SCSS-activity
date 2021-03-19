@@ -1,0 +1,145 @@
+/* re-usable */
+@mixin reset {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+// display
+$inline: inline-block;
+$flex: flex;
+$f-direction: column;
+$grid: grid;
+
+// Fonts
+$font-primary: Arial, sans-serif;
+$font-heading: serif;
+$color-primary: black;
+$font-size-primary: 1rem;
+$font-size-heading: 4rem;
+$font-size-heading2: 2.5rem;
+$font-weight-primary: 400;
+$font-weight-bold: 600;
+
+$align-heading: center;
+
+// buttons
+$button-align: center;
+
+// button
+$btn-padding: 0.5rem !default;
+$button-radius: 0.38rem !default;
+
+// outline
+$outline-boarder: 0.15rem solid blue;
+$outline-bgcolor: #fff;
+$outline-color: blue;
+
+body {
+  font-family: $font-primary;
+  color: $color-primary;
+}
+
+.btn {
+  display: $inline;
+  background-color: blue;
+  color: white;
+  padding: $btn-padding;
+  border-radius: $button-radius;
+  width: 10rem;
+  text-decoration: none;
+}
+
+/* hero portion */
+
+h1,
+h2 {
+  text-align: $align-heading;
+  font-family: $font-heading;
+}
+
+.hero {
+  display: $flex;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+h1 {
+  font-size: $font-size-heading;
+  font-weight: $font-weight-bold;
+  margin: auto;
+  padding-top: 3rem;
+}
+
+h2 {
+  font-size: $font-size-heading2;
+  font-weight: $font-weight-primary;
+}
+
+/* navigation */
+
+nav {
+  display: $flex;
+  flex-direction: $f-direction;
+  align-items: flex-end;
+  li {
+    display: $inline;
+    margin: auto;
+    padding-left: 2em;
+    font-size: 1.2rem;
+  }
+}
+
+.nav-bar {
+  margin-right: 1rem;
+}
+
+/* contact portion */
+
+.contact-info {
+  display: $flex;
+  flex-direction: $f-direction;
+  align-items: center;
+  margin: auto;
+  width: 90vw;
+  border-top: 0.25rem solid grey;
+  margin-top: 5rem;
+}
+
+.contact-info_btn {
+  border: $outline-boarder;
+  color: $outline-color;
+  background-color: $outline-bgcolor;
+  width: auto;
+  margin-top: 1rem;
+  font-size: $font-size-primary;
+  font-weight: $font-weight-bold;
+}
+
+.contact-info_form {
+  display: $flex;
+  flex-direction: $f-direction;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info_description {
+  width: 40%;
+}
+
+.contact_email,
+.contact_number {
+  width: 95%;
+}
+
+.contact_first,
+.contact_last,
+.contact_number,
+.contact_email {
+  margin: 0.25rem;
+  border: 0.1rem solid gray;
+  border-radius: 0.2rem;
+  height: 1.5rem;
+}
